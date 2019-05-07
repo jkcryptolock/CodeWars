@@ -1,5 +1,5 @@
 # CodeWars
-CodeWars katas
+CodeWars Solutions
 
 Collection of my solutions to CodeWars challenges.
 
