@@ -1,0 +1,12 @@
+function descendingOrder(n){
+// convert number to string
+  var string = n.toString();
+// convert string to array
+  var array = string.split('');
+//sort array from largest to smallest
+  var sorted = array.sort(function(a, b){
+    return b - a;
+    });
+// join the array into a string and convert to Number, then return
+  return Number(sorted.join(''));
+}
