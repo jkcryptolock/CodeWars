@@ -1,0 +1,9 @@
+function nextItem(xs, item) {
+  var found = false;
+  for (var x of xs) {
+    if (found) {
+      return x;
+    }
+  found = x === item;
+  }
+}
