@@ -1,0 +1,10 @@
+function validatePIN (pin) {
+  var array = pin.split('');
+  var regex = /^[0-9]+$/;
+  if (array.length === 4 || array.length === 6){
+    if (regex.test(pin)){
+    return true;
+    }
+  }
+  return false;
+}
