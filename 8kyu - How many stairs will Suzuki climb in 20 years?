@@ -1,0 +1,9 @@
+function stairsIn20(s){
+  var total = 0;
+  for (var i = 0; i < s.length; i++){
+    for (var j = 0; j < s[i].length; j++){
+    total = total + s[i][j];
+    }
+  }
+  return total * 20;
+}
