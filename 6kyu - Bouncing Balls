@@ -1,0 +1,11 @@
+function bouncingBall(h,  bounce,  window) {
+  var times = -1;
+  if (h > 0 && bounce > 0 && bounce < 1 && window < h){
+    while (h > window){
+      times += 2;
+      h = h * bounce;
+      }
+    return times;
+    }
+  return times;
+}
