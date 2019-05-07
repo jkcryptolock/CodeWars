@@ -1,0 +1,15 @@
+function findMissingLetter(array) {
+  var string = array.join('');
+  var missing = 0;
+  var letter = '';
+  for (var i = 0; i < string.length; i++){
+    array[i] = string.charCodeAt(i);
+  }
+  for (var i = 0; i < array.length; i++){
+    if (array[i] !== (array[i+1] - 1)){
+      missing = array[i+1] - 1;
+      break;
+    }
+  }
+  return String.fromCharCode(missing);
+}
