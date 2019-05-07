@@ -1,0 +1,8 @@
+function abbrevName(name){
+  name = name.split(' ');
+  let result = [];;
+  for (var i = 0; i < name.length; i++){
+    result += name[i][0].toUpperCase() + '.';
+  }
+  return result.slice(0, -1);
+}
