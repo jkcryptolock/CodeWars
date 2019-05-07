@@ -1,0 +1,22 @@
+function isValidWalk(walk) {
+  if (walk.length !== 10){
+    return false;
+  }
+  var n = 0, s = 0, w = 0, e = 0;
+  for (var i = 0; i < walk.length; i++){
+    if (walk[i] === 'n'){
+      n++;
+    } else if (walk[i] === 's'){
+      s++;
+    } else if (walk[i] === 'e'){
+      e++;
+    } else if (walk[i] === 'w'){
+      w++;
+    }
+  }
+  if (n === s && w === e){
+    return true;
+  } else {
+    return false;
+  }
+}
