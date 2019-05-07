@@ -1,0 +1,13 @@
+function digPow(n, p){
+  var numString = n.toString();
+  var array = numString.split('');
+  var sum = 0;
+  for (var i = 0; i < array.length; i++){
+    sum += Math.pow(array[i], p + i);
+  }
+  if (sum % n != 0){
+    return -1;
+  } else if (sum % n === 0){
+    return sum / n;
+  }
+}
