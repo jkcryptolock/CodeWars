@@ -1,0 +1,5 @@
+function integrate(coefficient, exponent) {
+  var exp = exponent + 1;
+  var coef = coefficient / exp;
+  return `${coef}x^${exp}`
+}
