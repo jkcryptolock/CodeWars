@@ -1,0 +1,4 @@
+function isToday(date) {
+  var now = new Date();
+  return date.toDateString() === now.toDateString() ? true : false;
+}
