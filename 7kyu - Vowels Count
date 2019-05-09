@@ -5,7 +5,6 @@ function getCount(str) {
   if (vowels === null){
     return 0;
   } else {
-  var vowelsCount = vowels.length;
-  return vowelsCount;
+  return vowels.length;
   }
 }
