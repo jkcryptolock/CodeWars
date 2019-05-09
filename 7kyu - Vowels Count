@@ -1,0 +1,11 @@
+//https://www.codewars.com/kata/vowel-count/train/javascript
+
+function getCount(str) {
+  var vowels = str.match(/[aeiou]/gi);
+  if (vowels === null){
+    return 0;
+  } else {
+  var vowelsCount = vowels.length;
+  return vowelsCount;
+  }
+}
