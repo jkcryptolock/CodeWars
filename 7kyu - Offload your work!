@@ -1,0 +1,19 @@
+//https://www.codewars.com/kata/offload-your-work/javascript
+
+function workNeeded(projectMinutes, freelancers){
+  var hiredTime = 0;
+  for (var i = 0; i < freelancers.length; i++){
+    hiredTime += (freelancers[i][0] * 60) + freelancers[i][1];
+  }
+  if (projectMinutes <= hiredTime){
+    return 'Easy Money!';
+  }
+  if (projectMinutes > hiredTime && projectMinutes - hiredTime < 60){
+    let minutes = projectMinutes - hiredTime;
+    return `I need to work 0 hour(s) and ${minutes} minute(s)`;
+  } else {
+    let hours = Math.floor((projectMinutes - hiredTime)/60);
+    let remainder = (projectMinutes - hiredTime) - (hours * 60);
+    return `I need to work ${hours} hour(s) and ${remainder} minute(s)`;
+  }
+}
