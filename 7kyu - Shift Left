@@ -1,0 +1,14 @@
+//https://www.codewars.com/kata/shift-left-1/train/javascript
+
+function shiftLeft(s, t){
+  let count = 0;
+  while (s != t){
+    if (s.length > t.length){
+      s = s.slice(1);
+    } else {
+      t = t.slice(1);
+    }
+    count++
+  }
+  return count;
+}
