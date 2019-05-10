@@ -1,0 +1,11 @@
+//https://www.codewars.com/kata/printer-errors/train/javascript
+
+function printerError(s) {
+ var regex = /[a-m]/gi, count = 0;
+ for (var i = 0; i < s.length; i++){
+   if (!s[i].match(regex)){
+     count++;
+    }
+  }
+  return `${count}/${s.length}`;
+}
