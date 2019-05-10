@@ -1,0 +1,15 @@
+//https://www.codewars.com/kata/going-to-the-cinema/javascript
+
+function movie(card, ticket, perc) {
+  var costA = 0;
+  var costB = card;
+  var count = 0;
+  while (Math.ceil(costB) >= costA){
+    count++;
+    costA += ticket;
+    costB += ticket * Math.pow(perc, count);
+  }
+  return count;
+}
+    
+  
