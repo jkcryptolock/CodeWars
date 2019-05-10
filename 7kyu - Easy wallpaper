@@ -1,0 +1,17 @@
+//https://www.codewars.com/kata/easy-wallpaper/train/javascript
+
+function wallpaper(l, w, h) {
+ if (l === 0 || h === 0 || w === 0){
+   return 'zero'
+ }
+ var total = (l*h*2) + (w*h*2);
+ var paper = 10*.52;
+ var result = Math.ceil((total*1.15)/paper);
+ var nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+ var text = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+ for (var i = 0; i < nums.length; i++){
+   if (nums[i] === result){
+     return text[i];
+   }
+ }
+}
