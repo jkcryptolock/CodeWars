@@ -1,0 +1,7 @@
+//https://www.codewars.com/kata/two-to-one/train/javascript
+
+function longest(s1, s2) {
+  let str = s1.concat(s2).split('');
+  str = [...new Set(str)]
+  return str.sort().join('');
+}
