@@ -1,0 +1,11 @@
+//https://www.codewars.com/kata/whats-my-golf-score/javascript
+
+function golfScoreCalculator(parList, scoreList){
+ var newArr = [];
+ var par = parList.split('');
+ var score = scoreList.split('');
+ for (var i = 0; i < par.length; i++){
+   newArr.push(+score[i] - +par[i]);
+  }
+return newArr.reduce((a,b) => a+b);
+}
