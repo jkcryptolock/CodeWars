@@ -1,0 +1,5 @@
+//https://www.codewars.com/kata/thinkful-string-drills-repeater/train/javascript
+
+function repeater(string, n){
+  return string.repeat(n);
+}
