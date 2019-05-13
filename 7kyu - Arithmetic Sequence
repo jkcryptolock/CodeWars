@@ -1,0 +1,9 @@
+//https://www.codewars.com/kata/arithmetic-sequence/javascript
+
+function nthterm(first, n, c){
+  let result = first;
+  for (let i = 1; i <= n; i++){
+    result += c;
+  }
+  return result;
+}
