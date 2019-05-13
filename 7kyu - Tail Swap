@@ -1,0 +1,13 @@
+//https://www.codewars.com/kata/tail-swap/javascript
+
+function tailSwap(arr) {
+  var res = [];
+  var first = arr[0].split(':');
+  var second = arr[1].split(':');
+  var one = first[1], two = second[1];
+  first[1] = two, second[1] = one;
+  first = first.join(':');
+  second = second.join(':');
+  res.push(first, second);
+  return res;
+}
