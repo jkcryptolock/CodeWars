@@ -1,0 +1,20 @@
+//https://www.codewars.com/kata/hungarian-vowel-harmony-easy/javascript
+
+function dative(word) {
+    var nek = /[eéiíöőüű]/gi
+    var nak = /[aáoóuú]/gi
+    if (word.search(nek) !== -1){
+      if (word.slice(word.search(nek)).search(nak) !== -1){
+        word += 'nak'
+      } else {
+        word += 'nek'
+      }
+    } else if (word.search(nak) !== -1){
+        if (word.slice(word.search(nak)).search(nek) !== -1){
+          word += 'nek'
+        } else {
+          word += 'nak'
+        }
+    }
+    return word;
+}
