@@ -1,0 +1,10 @@
+//https://www.codewars.com/kata/mumbling/train/javascript
+
+function accum(s) {
+  s = s.toLowerCase().split('');
+  let str = '';
+  for (var i = 0; i < s.length; i++){
+  str += s[i].toUpperCase() + s[i].repeat(i) + '-';
+  }
+  return str.slice(0, str.length - 1);
+}
