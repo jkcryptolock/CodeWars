@@ -1,0 +1,5 @@
+//https://www.codewars.com/kata/the-ladies-of-eniac/javascript
+
+function radLadies(name){
+  return name.replace(/[^a-z A-Z!]/g, '').toUpperCase();
+}
