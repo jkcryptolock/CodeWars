@@ -1,0 +1,19 @@
+function stockList(listofArt, listofCat){
+  if (listofArt.length === 0 || listofCat === 0){
+    return '';
+  }
+  var sums = {}, str = '';
+  for (var i = 0; i < listofArt.length; i++){
+    listofArt[i] = listofArt[i].split(' ');
+    if (sums[listofArt[i][0].charAt(0)] === undefined){
+      sums[listofArt[i][0].charAt(0)] = 0;
+    }
+    sums[listofArt[i][0].charAt(0)] += Number(listofArt[i][1]);
+  }
+  for (var j = 0; j < listofCat.length; j++){
+    if (sums[listofCat[j]] === undefined){
+      str += '(' + listofCat[j] + ' : 0) - '
+    } else if (sums[listofCat[j]]){
+      str += '(' + listofCat[j] + ' : ' + sums[listofCat[j]] + ') - ';
+    }
+  }
