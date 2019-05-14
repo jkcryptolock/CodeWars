@@ -1,0 +1,26 @@
+//https://www.codewars.com/kata/consonant-value/javascript
+
+function solve(str) {
+ let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+ let values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+ let converted = [];
+ str = str.replace(/[aeiou]/g, ' ').split(' ')
+ for (var i = 0; i < str.length; i++){
+   str[i] = str[i].split('');
+   for (var j = 0; j < letters.length; j++){
+     for (var k = 0; k < str[i].length; k++){
+       if (str[i][k] === letters[j]){
+         str[i][k] = values[j];
+       }
+     }
+   }
+ }
+ for (var l = 0; l < str.length; l++){
+   let sum = 0;
+   for (var m = 0; m < str[l].length; m++){
+     sum += str[l][m];
+   }
+   str[l] = sum;
+ }
+ return Math.max(...str);
+}
