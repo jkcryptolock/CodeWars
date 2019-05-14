@@ -1,0 +1,15 @@
+//https://www.codewars.com/kata/are-they-the-same/javascript
+
+function comp(array1, array2){
+  if (array1 === null || array2 === null){
+    return false;
+  }
+  array1.sort((a, b) => a-b);
+  array2.sort((a, b) => a-b);
+  for (var i = 0; i < array1.length; i++){
+    if (Math.pow(array1[i], 2) !== array2[i]){
+      return false;
+    }
+  }
+  return true;
+}
