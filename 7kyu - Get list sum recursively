@@ -1,0 +1,6 @@
+//https://www.codewars.com/kata/get-list-sum-recursively/javascript
+
+function sumR(x){
+  x = x.reduce((a,b)=>a+b);
+  return x;
+}
