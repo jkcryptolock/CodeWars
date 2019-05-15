@@ -1,0 +1,19 @@
+//https://www.codewars.com/kata/sum-of-all-the-multiples-of-3-or-5/train/javascript
+
+function findSum(n) {
+  let arr = [];
+  for (var i = 1; i <= n; i++){
+    if (isNum(i)){
+      arr.push(i);
+    }
+  }
+  return arr.reduce((a,b) => a+b);
+}
+
+function isNum(x){
+  if (x % 3 === 0 || x % 5 === 0){
+    return true;
+  }
+}
+
+findSum(5);
